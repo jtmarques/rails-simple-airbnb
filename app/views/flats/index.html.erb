@@ -1,0 +1,22 @@
+
+
+<h1>All our Flats</h1>
+
+<p>All <%= @flats.size %> flats.</p>
+<div class="container-fluid d-flex justify-content-between">
+  <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top img-thumbnail" src="https://source.unsplash.com/random" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+        <p class="card-text">👨‍👩‍👦 <%= flat.number_of_guests %> | 💶 <%= flat.price_per_night %></p>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">More info X</a>
+        <a href="#" class="card-link">Edit X</a>
+        <a href="#" class="card-link">Remove X</a>
+      </div>
+    </div>
+  <% end %>
+</div>
